@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>無料プレゼント10個｜元気のAI副業LINE</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -122,7 +122,10 @@ body{font-family:'Hiragino Sans','Hiragino Kochi Gothic','Yu Gothic',sans-serif;
 p{margin-bottom:14px;}
 p:last-child{margin-bottom:0;}
 
-/* スマホ最適化（375px以下） */
+/* スムーズスクロール */
+html{scroll-behavior:smooth;}
+
+/* スマホ最適化（390px以下） */
 @media(max-width:390px){
   .fv-main{font-size:24px;}
   .fv-sub{font-size:13px;}
@@ -137,6 +140,16 @@ p:last-child{margin-bottom:0;}
   .stat-n{font-size:20px;}
   .cta-title{font-size:19px;}
 }
+
+/* 中間スマホ（391px〜767px） */
+@media(min-width:391px) and (max-width:767px){
+  .fv-main{font-size:26px;}
+  .line-btn .btn-main{font-size:17px;}
+  .sec{padding:40px 20px;}
+}
+
+/* スティッキーCTA */
+.sticky-cta{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:calc(100% - 40px);max-width:420px;z-index:1000;display:none;filter:drop-shadow(0 8px 20px rgba(6,199,85,.5));}
 </style>
 </head>
 <body>
@@ -204,8 +217,6 @@ p:last-child{margin-bottom:0;}
   </div>
 </div>
 
-<div class="hazard"></div>
-
 <!-- 受講生の声 -->
 <div class="sec">
   <div class="red-box">受講生の声（LINEの報告をそのまま掲載）</div>
@@ -217,8 +228,6 @@ p:last-child{margin-bottom:0;}
     <img src="voice-2.jpg" alt="受講生の声②" style="width:100%;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,.15);">
   </div>
 </div>
-
-<div class="hazard"></div>
 
 <!-- 問題提起 -->
 <div class="sec sec-gray">
@@ -232,8 +241,6 @@ p:last-child{margin-bottom:0;}
     だから正直に全部お答えします。<strong>隠し事は一切しません。</strong>
   </p>
 </div>
-
-<div class="hazard"></div>
 
 <!-- Q&A① -->
 <div class="sec">
@@ -471,6 +478,29 @@ p:last-child{margin-bottom:0;}
 
 <div class="hazard"></div>
 <div class="footer">© 2026 元気｜AI副業の教科書</div>
+
+<!-- スティッキーCTA（ヒーロー通過後に表示） -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="#LINE_URL" class="line-btn">
+    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="12" fill="white"/><path d="M24 8C15.163 8 8 14.477 8 22.4c0 4.628 2.476 8.748 6.348 11.44-.248.896-1.6 5.78-1.648 6.16 0 0-.024.196.104.272.128.076.276.012.276.012.36-.048 6.228-4.08 7.256-4.784.844.12 1.708.18 2.664.18 8.836 0 16-6.476 16-14.28C40 14.477 32.836 8 24 8z" fill="#06C755"/><path d="M34.8 25.2h-4.4a.4.4 0 0 1-.4-.4v-6.8a.4.4 0 0 1 .4-.4h4.4a.4.4 0 0 1 .4.4v1.2a.4.4 0 0 1-.4.4H32v1h2.8a.4.4 0 0 1 .4.4v1.2a.4.4 0 0 1-.4.4H32v1h2.8a.4.4 0 0 1 .4.4v1.2a.4.4 0 0 1-.4.4zm-6.8 0h-1.2a.4.4 0 0 1-.4-.4v-6.8a.4.4 0 0 1 .4-.4H28a.4.4 0 0 1 .4.4v6.8a.4.4 0 0 1-.4.4zm-2.8 0h-4.4a.4.4 0 0 1-.4-.4v-6.8a.4.4 0 0 1 .4-.4H22a.4.4 0 0 1 .4.4v5.6H25a.4.4 0 0 1 .4.4v1.2a.4.4 0 0 1-.4.4h.2zm-6 0h-1.2a.4.4 0 0 1-.4-.4v-6.8a.4.4 0 0 1 .4-.4h1.2a.4.4 0 0 1 .4.4v6.8a.4.4 0 0 1-.4.4z" fill="white"/></svg>
+    <div class="btn-text">
+      <span class="btn-main">無料プレゼントを受け取る</span>
+      <span class="btn-sub">LINEで受け取る・無料・1分で完了</span>
+    </div>
+  </a>
+</div>
+<script>
+(function(){
+  var cta=document.getElementById('stickyCta');
+  var hero=document.querySelector('.fv');
+  function check(){
+    if(!hero)return;
+    cta.style.display=hero.getBoundingClientRect().bottom<0?'block':'none';
+  }
+  window.addEventListener('scroll',check,{passive:true});
+  check();
+})();
+</script>
 
 </body>
 </html>

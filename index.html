@@ -163,6 +163,21 @@ html{scroll-behavior:smooth;}
   .sec{padding:40px 20px;}
 }
 
+/* カウントダウン */
+.countdown-wrap{background:#0d0d0d;padding:22px 20px 20px;text-align:center;border-bottom:2px solid #222;}
+.countdown-label{color:#aaa;font-size:14px;margin-bottom:4px;}
+.countdown-price{color:#f5c400;font-weight:900;font-size:16px;text-decoration:line-through;margin:0 2px;}
+.countdown-limit{color:#fff;font-size:18px;font-weight:900;margin-bottom:16px;line-height:1.4;}
+.countdown-free{color:#ff4444;font-size:22px;font-weight:900;}
+.countdown-timer-row{display:flex;align-items:center;justify-content:center;gap:4px;margin-bottom:12px;}
+.countdown-unit{display:flex;flex-direction:column;align-items:center;gap:4px;}
+.countdown-digit{display:block;background:#cc0000;color:#fff;font-size:38px;font-weight:900;width:80px;border-radius:8px;line-height:1;padding:10px 0;font-variant-numeric:tabular-nums;letter-spacing:2px;box-shadow:0 4px 0 #880000;}
+.countdown-unit-label{color:#aaa;font-size:11px;font-weight:700;letter-spacing:1px;}
+.countdown-colon{color:#cc0000;font-size:34px;font-weight:900;margin-bottom:18px;line-height:1;}
+.countdown-sub{color:#666;font-size:12px;}
+.countdown-expired .countdown-digit{background:#444;}
+.countdown-expired .countdown-limit{color:#888;}
+
 /* スティッキーCTA */
 .sticky-cta{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);width:calc(100% - 40px);max-width:420px;z-index:1000;display:none;filter:drop-shadow(0 8px 20px rgba(6,199,85,.5));}
 </style>
@@ -172,6 +187,21 @@ html{scroll-behavior:smooth;}
 <!-- ハザード -->
 <div class="hazard"></div>
 <div class="urgent">⚡ 先着30名限定｜無料プレゼント10個配布中<br><span style="font-size:12px;font-weight:400;">30名の枠が埋まった瞬間、この案内は消えます</span></div>
+<div class="hazard"></div>
+
+<!-- カウントダウン -->
+<div class="countdown-wrap">
+  <div class="countdown-label">本来<span class="countdown-price">50万円</span>で配っているものを</div>
+  <div class="countdown-limit">24時間限定 <span class="countdown-free">0円</span>プレゼント</div>
+  <div class="countdown-timer-row">
+    <div class="countdown-unit"><span class="countdown-digit" id="cd-h">00</span><span class="countdown-unit-label">時間</span></div>
+    <div class="countdown-colon">:</div>
+    <div class="countdown-unit"><span class="countdown-digit" id="cd-m">00</span><span class="countdown-unit-label">分</span></div>
+    <div class="countdown-colon">:</div>
+    <div class="countdown-unit"><span class="countdown-digit" id="cd-s">00</span><span class="countdown-unit-label">秒</span></div>
+  </div>
+  <div class="countdown-sub" id="cd-msg">このページを閉じると無効になります</div>
+</div>
 <div class="hazard"></div>
 
 <!-- ファーストビュー -->
@@ -603,6 +633,43 @@ html{scroll-behavior:smooth;}
   }
   window.addEventListener('scroll',check,{passive:true});
   check();
+})();
+
+// カウントダウンタイマー
+(function(){
+  var KEY='lp_cd_start';
+  var DURATION=24*60*60*1000; // 24時間
+  var now=Date.now();
+  var start=localStorage.getItem(KEY);
+  if(!start){start=now;localStorage.setItem(KEY,start);}
+  start=parseInt(start,10);
+  var end=start+DURATION;
+
+  var elH=document.getElementById('cd-h');
+  var elM=document.getElementById('cd-m');
+  var elS=document.getElementById('cd-s');
+  var elMsg=document.getElementById('cd-msg');
+  var wrap=document.querySelector('.countdown-wrap');
+
+  function pad(n){return n<10?'0'+n:''+n;}
+
+  function tick(){
+    var rem=end-Date.now();
+    if(rem<=0){
+      elH.textContent='00';elM.textContent='00';elS.textContent='00';
+      elMsg.textContent='この特典の配布は終了しました';
+      wrap.classList.add('countdown-expired');
+      return;
+    }
+    var h=Math.floor(rem/3600000);
+    var m=Math.floor((rem%3600000)/60000);
+    var s=Math.floor((rem%60000)/1000);
+    elH.textContent=pad(h);
+    elM.textContent=pad(m);
+    elS.textContent=pad(s);
+    setTimeout(tick,1000);
+  }
+  tick();
 })();
 </script>
 

@@ -6,7 +6,8 @@
 <title>無料プレゼント10個｜元気のAI副業LINE</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Hiragino Sans','Hiragino Kochi Gothic','Yu Gothic',sans-serif;background:#fff;color:#222;font-size:16px;line-height:1.8;max-width:750px;margin:0 auto;padding-bottom:90px;}
+body{font-family:'Hiragino Sans','Hiragino Kochi Gothic','Yu Gothic',sans-serif;background:#fff;color:#222;font-size:16px;line-height:1.8;max-width:750px;margin:0 auto;padding-bottom:90px;word-break:auto-phrase;overflow-wrap:anywhere;}
+p,li,.present-title,.present-head-label,.red-box,.gold-box,.haz-title-inner,.cta-title,.choice-title{text-wrap:pretty;}
 
 /* ハザードテープ */
 .hazard{height:22px;background:repeating-linear-gradient(-45deg,#f5c400,#f5c400 14px,#111 14px,#111 28px);}
@@ -16,8 +17,9 @@ body{font-family:'Hiragino Sans','Hiragino Kochi Gothic','Yu Gothic',sans-serif;
 
 /* ファーストビュー */
 .fv{background:linear-gradient(180deg,#0a0a1a 0%,#1a1a3e 100%);padding:40px 20px 44px;text-align:center;}
-.fv-doubt{color:#aaa;font-size:15px;margin-bottom:20px;line-height:2;}
-.fv-doubt span{display:inline-block;background:rgba(255,255,255,.08);border-radius:4px;padding:4px 12px;margin:3px 4px;}
+.fv-doubt{margin-bottom:24px;display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:0 4px;}
+.fv-doubt span{display:inline-block;background:#fff;color:#222;font-size:14px;font-weight:700;padding:10px 18px;border-radius:22px 22px 22px 4px;position:relative;box-shadow:0 4px 18px rgba(0,0,0,.4);line-height:1.5;}
+.fv-doubt span::after{content:'';position:absolute;bottom:-8px;left:16px;width:0;height:0;border-top:9px solid #fff;border-right:12px solid transparent;}
 .fv-main{color:#fff;font-size:28px;font-weight:900;line-height:1.5;margin-bottom:10px;}
 .fv-main .y{color:#f5c400;}
 .fv-main .r{color:#ff4444;}
@@ -69,9 +71,10 @@ body{font-family:'Hiragino Sans','Hiragino Kochi Gothic','Yu Gothic',sans-serif;
 .voice-text{font-size:15px;color:#333;line-height:1.85;margin-bottom:8px;}
 .voice-name{font-size:12px;color:#999;}
 
-/* 吹き出し疑問 */
-.doubt-bubble{background:#eee;border-radius:8px;padding:14px 16px;font-size:15px;margin-bottom:10px;position:relative;color:#555;}
-.doubt-bubble::before{content:'💭';margin-right:8px;}
+/* 吹き出し疑問（モコモコ白） */
+.doubt-bubble{display:inline-block;background:#fff;border-radius:24px 24px 24px 6px;padding:12px 20px;font-size:15px;font-weight:700;margin-bottom:18px;position:relative;color:#333;box-shadow:0 4px 16px rgba(0,0,0,.1),0 1px 4px rgba(0,0,0,.07);line-height:1.5;}
+.doubt-bubble::before{content:none;}
+.doubt-bubble::after{content:'';position:absolute;bottom:-9px;left:20px;width:0;height:0;border-top:10px solid #fff;border-right:14px solid transparent;filter:drop-shadow(0 3px 2px rgba(0,0,0,.06));}
 
 /* Q&Aボックス */
 .qa{border:2px solid #cc0000;border-radius:8px;overflow:hidden;margin-bottom:20px;}

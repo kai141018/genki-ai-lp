@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>無料プレゼント10個｜元気のAI副業LINE</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Hiragino Sans','Hiragino Kochi Gothic','Yu Gothic',sans-serif;background:#fff;color:#222;font-size:16px;line-height:1.8;max-width:750px;margin:0 auto;}
+
+/* ハザードテープ */
+.hazard{height:22px;background:repeating-linear-gradient(-45deg,#f5c400,#f5c400 14px,#111 14px,#111 28px);}
+
+/* 緊急バー */
+.urgent{background:#cc0000;color:#fff;text-align:center;padding:14px 16px;font-size:15px;font-weight:900;letter-spacing:1px;}
+
+/* ファーストビュー */
+.fv{background:linear-gradient(180deg,#0a0a1a 0%,#1a1a3e 100%);padding:40px 20px 44px;text-align:center;}
+.fv-doubt{color:#aaa;font-size:13px;margin-bottom:20px;line-height:2;}
+.fv-doubt span{display:inline-block;background:rgba(255,255,255,.08);border-radius:4px;padding:4px 12px;margin:3px 4px;}
+.fv-main{color:#fff;font-size:28px;font-weight:900;line-height:1.5;margin-bottom:10px;}
+.fv-main .y{color:#f5c400;}
+.fv-main .r{color:#ff4444;}
+.fv-sub{color:#ccc;font-size:14px;margin-bottom:32px;line-height:1.8;}
+.fv-badge{display:inline-block;background:#cc0000;color:#fff;font-size:12px;font-weight:700;padding:6px 18px;border-radius:3px;margin-bottom:20px;}
+
+/* LINEボタン */
+.line-btn{display:block;background:linear-gradient(180deg,#06c755,#04a344);color:#fff;font-size:20px;font-weight:900;text-align:center;padding:22px 20px;border-radius:8px;text-decoration:none;box-shadow:0 6px 0 #028a36;position:relative;max-width:420px;margin:0 auto;}
+.line-btn::after{content:'▶';position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:16px;}
+.line-note{color:#888;font-size:12px;margin-top:10px;text-align:center;}
+
+/* セクション */
+.sec{padding:44px 20px;}
+.sec-gray{background:#f5f5f5;}
+.sec-dark{background:#111;color:#fff;}
+.sec-red{background:#cc0000;color:#fff;}
+
+/* 赤タイトルボックス */
+.red-box{background:#cc0000;color:#fff;text-align:center;padding:14px 16px;font-size:18px;font-weight:900;border-radius:4px;margin-bottom:24px;line-height:1.4;}
+
+/* 金タイトルボックス */
+.gold-box{background:linear-gradient(180deg,#f5c400,#d4a900);color:#111;text-align:center;padding:14px 16px;font-size:18px;font-weight:900;border-radius:4px;margin-bottom:24px;line-height:1.4;}
+
+/* ハザードタイトル（競合スタイル） */
+.haz-title{background:repeating-linear-gradient(-45deg,#f5c400,#f5c400 10px,#111 10px,#111 20px);padding:4px;border-radius:4px;margin-bottom:24px;}
+.haz-title-inner{background:#cc0000;color:#fff;text-align:center;padding:14px;font-size:18px;font-weight:900;border-radius:2px;line-height:1.4;}
+
+/* プロフィールカード */
+.profile-card{background:#fff;border:3px solid #cc0000;border-radius:8px;padding:24px 20px;}
+.profile-name{font-size:24px;font-weight:900;color:#111;margin-bottom:4px;}
+.profile-tag{font-size:13px;color:#cc0000;font-weight:700;margin-bottom:20px;}
+.stats-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;}
+.stat{background:#cc0000;color:#fff;border-radius:6px;padding:16px 10px;text-align:center;}
+.stat-n{font-size:24px;font-weight:900;line-height:1.1;}
+.stat-l{font-size:11px;margin-top:4px;}
+.profile-text{font-size:15px;color:#444;line-height:1.9;}
+.profile-text p{margin-bottom:12px;}
+
+/* アバター */
+.avatar-wrap{text-align:center;margin-bottom:20px;}
+.avatar{width:100px;height:100px;border-radius:50%;border:4px solid #cc0000;object-fit:cover;background:#ddd;}
+.avatar-placeholder{width:100px;height:100px;border-radius:50%;border:4px solid #cc0000;background:linear-gradient(135deg,#f5c400,#cc0000);display:inline-flex;align-items:center;justify-content:center;font-size:36px;}
+
+/* 声カード */
+.voice{background:#fff;border-left:5px solid #f5c400;border-radius:0 8px 8px 0;padding:18px 16px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.07);}
+.voice-text{font-size:15px;color:#333;line-height:1.85;margin-bottom:8px;}
+.voice-name{font-size:12px;color:#999;}
+
+/* 吹き出し疑問 */
+.doubt-bubble{background:#eee;border-radius:8px;padding:14px 16px;font-size:15px;margin-bottom:10px;position:relative;color:#555;}
+.doubt-bubble::before{content:'💭';margin-right:8px;}
+
+/* Q&Aボックス */
+.qa{border:2px solid #cc0000;border-radius:8px;overflow:hidden;margin-bottom:20px;}
+.qa-q{background:#cc0000;color:#fff;padding:16px;font-size:16px;font-weight:900;line-height:1.5;}
+.qa-q::before{content:'Q. ';}
+.qa-a{background:#fff;padding:18px 16px;font-size:15px;line-height:1.9;color:#333;}
+.qa-a::before{content:'A. ';font-weight:900;color:#cc0000;}
+
+/* 3択ボックス */
+.choice{border-radius:8px;padding:18px 16px;margin-bottom:14px;}
+.choice-bad{background:#1a1a1a;border:2px solid #444;}
+.choice-bad .choice-mark{color:#ff4444;font-size:18px;font-weight:900;}
+.choice-good{background:#cc0000;border:2px solid #ff6666;}
+.choice-good .choice-mark{color:#fff;font-size:18px;font-weight:900;}
+.choice-title{font-size:16px;font-weight:900;color:#fff;margin:6px 0;}
+.choice-sub{font-size:13px;color:#ccc;line-height:1.6;}
+.choice-good .choice-sub{color:#ffe;}
+
+/* プレゼントカード */
+.present{background:rgba(255,255,255,.06);border:1px solid rgba(245,196,0,.5);border-radius:8px;padding:20px 16px;margin-bottom:14px;}
+.present-badge{background:#f5c400;color:#111;font-size:12px;font-weight:900;display:inline-block;padding:4px 12px;border-radius:3px;margin-bottom:10px;}
+.present-title{color:#fff;font-size:18px;font-weight:900;line-height:1.5;}
+.present-sub{color:#aaa;font-size:13px;margin-top:6px;}
+
+/* チェックリスト */
+.check-list{list-style:none;}
+.check-list li{padding:10px 0 10px 30px;border-bottom:1px solid rgba(255,255,255,.1);font-size:15px;position:relative;color:#fff;}
+.check-list li::before{content:'✓';position:absolute;left:0;color:#f5c400;font-weight:900;font-size:17px;}
+
+/* 最終CTAセクション */
+.cta-sec{background:linear-gradient(180deg,#0a0a1a,#1a1a3e);padding:48px 20px;text-align:center;}
+.cta-title{color:#fff;font-size:22px;font-weight:900;line-height:1.6;margin-bottom:8px;}
+.cta-sub{color:#aaa;font-size:14px;margin-bottom:28px;line-height:1.7;}
+
+/* ステップ */
+.steps{background:rgba(255,255,255,.07);border-radius:8px;padding:20px 16px;margin-bottom:28px;text-align:left;}
+.step{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px;}
+.step:last-child{margin-bottom:0;}
+.step-num{background:#f5c400;color:#111;font-weight:900;font-size:14px;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.step-text{color:#fff;font-size:15px;padding-top:4px;line-height:1.6;}
+
+/* フッター */
+.footer{background:#000;color:#555;text-align:center;padding:20px;font-size:12px;}
+
+/* 区切り */
+.divider{height:2px;background:linear-gradient(90deg,transparent,#cc0000,transparent);margin:4px 0;}
+
+p{margin-bottom:14px;}
+p:last-child{margin-bottom:0;}
+
+/* スマホ最適化（375px以下） */
+@media(max-width:390px){
+  .fv-main{font-size:24px;}
+  .fv-sub{font-size:13px;}
+  .haz-title-inner,.red-box,.gold-box{font-size:16px;}
+  .line-btn{font-size:18px;padding:20px 16px;}
+  .present-title{font-size:16px;}
+  .qa-q{font-size:15px;}
+  .sec{padding:36px 16px;}
+  .profile-card{padding:20px 16px;}
+  .stat-n{font-size:20px;}
+  .cta-title{font-size:19px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ハザード -->
+<div class="hazard"></div>
+<div class="urgent">⚡ 先着30名限定｜無料プレゼント10個配布中 ⚡<br><span style="font-size:12px;font-weight:400;">30名の枠が埋まった瞬間、この案内は消えます</span></div>
+<div class="hazard"></div>
+
+<!-- ファーストビュー -->
+<div class="fv">
+  <div class="fv-badge">完全無料 LINE登録特典</div>
+  <div class="fv-doubt">
+    <span>「どうせ怪しいんだろう」</span>
+    <span>「自分にできるわけがない」</span>
+    <span>「また失敗するだけだ」</span>
+  </div>
+  <div class="fv-main">
+    元サラリーマンが<br>
+    AIコピペ副業で<br>
+    <span class="r">月利益100万オーバー。</span><br>
+    <span class="y">その方法を今日<br>全部話します。</span>
+  </div>
+  <p class="fv-sub">
+    このページを最後まで読めば<br>
+    「やる」か「やらない」か<br>
+    確信を持って決断できます。
+  </p>
+  <a href="#LINE_URL" class="line-btn">今すぐ無料で受け取る</a>
+  <p class="line-note">※LINEアプリが開きます｜登録無料・1分で完了</p>
+</div>
+
+<div class="hazard"></div>
+
+<!-- プロフィール -->
+<div class="sec sec-gray">
+  <div class="red-box">📖 まず私のことを話させてください</div>
+  <div class="profile-card">
+    <div class="avatar-wrap">
+      <img src="genki-icon.png" alt="元気" class="avatar" style="width:120px;height:120px;">
+    </div>
+    <div class="profile-name">元気</div>
+    <div class="profile-tag">AI副業の教科書｜元サラリーマン</div>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-n">月100万↑</div><div class="stat-l">AI副業で達成</div></div>
+      <div class="stat"><div class="stat-n">多数</div><div class="stat-l">月10万円超え受講生</div></div>
+    </div>
+    <div style="margin-bottom:16px;">
+      <p style="font-size:12px;color:#cc0000;font-weight:700;margin-bottom:6px;">▼ 実際の成果報酬（利益）管理画面</p>
+      <img src="proof-earnings.png" alt="実績証拠" style="width:100%;border-radius:8px;border:2px solid #cc0000;">
+      <p style="font-size:11px;color:#999;margin-top:6px;text-align:center;">※ 成果報酬の管理画面をそのままスクリーンショット</p>
+    </div>
+    <div class="profile-text">
+      <p>もともとは普通のサラリーマンでした。</p>
+      <p>副業に挑戦するたびに挫折して、何度も「自分には無理だ」と思いました。せどり、アフィリエイト、YouTube。全部続かなかった。</p>
+      <p>そんな私が、AIを使ったコピペだけの副業に出会ってから、人生が変わりました。気づいたら月100万円を超えていた。</p>
+      <p>今では私が教えた40〜50代の方たちが、本業を続けながら月10万円以上稼いでいます。</p>
+    </div>
+  </div>
+</div>
+
+<div class="hazard"></div>
+
+<!-- 受講生の声 -->
+<div class="sec">
+  <div class="red-box">受講生の声（LINEの報告をそのまま掲載）</div>
+  <p style="font-size:13px;color:#999;text-align:center;margin-bottom:20px;">※個人情報保護のため一部加工しています</p>
+  <div style="margin-bottom:16px;">
+    <img src="voice-1.jpg" alt="受講生の声①" style="width:100%;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,.15);">
+  </div>
+  <div style="margin-bottom:16px;">
+    <img src="voice-2.jpg" alt="受講生の声②" style="width:100%;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,.15);">
+  </div>
+</div>
+
+<div class="hazard"></div>
+
+<!-- 問題提起 -->
+<div class="sec sec-gray">
+  <div class="red-box">LINE登録前に<br>全部お答えします</div>
+  <div class="doubt-bubble">本当に稼げるんですか？</div>
+  <div class="doubt-bubble">詐欺じゃないですか？</div>
+  <div class="doubt-bubble">素人でも大丈夫ですか？</div>
+  <div class="doubt-bubble">忙しくても続けられますか？</div>
+  <p style="margin-top:20px;font-size:15px;color:#444;line-height:1.9;">
+    こうした不安を持つのは当然です。大切な時間とお金を使うのですから慎重になって当たり前。<br>
+    だから正直に全部お答えします。<strong>隠し事は一切しません。</strong>
+  </p>
+</div>
+
+<div class="hazard"></div>
+
+<!-- Q&A① -->
+<div class="sec">
+  <div class="haz-title"><div class="haz-title-inner">よくある質問 ①</div></div>
+  <div class="qa">
+    <div class="qa-q">そもそも何がもらえるんですか？</div>
+    <div class="qa-a">LINE登録するだけで特典10個を無料でお渡しします。費用ゼロ・勧誘なし・1分で受け取れます。最後まで読んでから判断してください。</div>
+  </div>
+</div>
+
+<!-- Q&A② -->
+<div class="sec sec-gray">
+  <div class="haz-title"><div class="haz-title-inner">よくある質問 ②</div></div>
+  <div class="qa">
+    <div class="qa-q">本当に稼げるんですか？怪しくないですか？</div>
+    <div class="qa-a">怪しいと感じるのは当然です。私も最初そう思いました。私自身が月100万円を達成しています。教えた受講生の中で月10万円以上が多数います。全員が本業を続けながらです。</div>
+  </div>
+</div>
+
+<!-- Q&A③ -->
+<div class="sec">
+  <div class="haz-title"><div class="haz-title-inner">よくある質問 ③</div></div>
+  <div class="qa">
+    <div class="qa-q">具体的にどんな副業ですか？</div>
+    <div class="qa-a">AIに指示を入力すると、稼げる文章が自動で完成します。それをコピペして、あるSNSに投稿するだけ。AIが9割やってくれるので、人間がやるのはコピペだけです。知識不要・スマホで完結。具体的な手法はLINE登録後に特典として全部お伝えします。</div>
+  </div>
+</div>
+
+<!-- Q&A④ -->
+<div class="sec sec-gray">
+  <div class="haz-title"><div class="haz-title-inner">よくある質問 ④</div></div>
+  <div class="qa">
+    <div class="qa-q">1日にどれくらい時間が必要ですか？</div>
+    <div class="qa-a">慣れれば1日30分で十分です。通勤電車、昼休み、子どもが寝た後。AIがほとんど作ってくれるので人間がやるのはコピペだけです。</div>
+  </div>
+</div>
+
+<!-- Q&A⑤ -->
+<div class="sec">
+  <div class="haz-title"><div class="haz-title-inner">よくある質問 ⑤</div></div>
+  <div class="qa">
+    <div class="qa-q">スマホしかないのですが大丈夫ですか？</div>
+    <div class="qa-a">大丈夫です。受講生の大半はスマホのみです。52歳のパート主婦がスマホだけで収益を上げています。パソコンは一切必要ありません。</div>
+  </div>
+</div>
+
+<!-- Q&A⑥ -->
+<div class="sec sec-gray">
+  <div class="haz-title"><div class="haz-title-inner">よくある質問 ⑥</div></div>
+  <div class="qa">
+    <div class="qa-q">AIやITが苦手でも大丈夫ですか？</div>
+    <div class="qa-a">むしろ苦手な方が向いています。ターゲットも同じ40〜50代なので、難しい言葉を使わない素朴な言葉の方が同世代の心に刺さります。使い方は特典の中で丁寧に説明します。</div>
+  </div>
+</div>
+
+<!-- Q&A⑦ -->
+<div class="sec">
+  <div class="haz-title"><div class="haz-title-inner">よくある質問 ⑦</div></div>
+  <div class="qa">
+    <div class="qa-q">40代・50代でも遅くないですか？</div>
+    <div class="qa-a">遅くありません。むしろ有利です。同世代が書いた等身大の言葉は同世代に圧倒的に信頼されます。年齢は制限ではなく、あなただけの強みです。</div>
+  </div>
+</div>
+
+<!-- Q&A⑧ -->
+<div class="sec sec-gray">
+  <div class="haz-title"><div class="haz-title-inner">よくある質問 ⑧</div></div>
+  <div class="qa">
+    <div class="qa-q">副業が会社にバレませんか？</div>
+    <div class="qa-a">住民税を普通徴収にすることでバレにくくなります。顔出し・本名も不要なので完全匿名で始められます。</div>
+  </div>
+</div>
+
+<!-- Q&A⑨ -->
+<div class="sec">
+  <div class="haz-title"><div class="haz-title-inner">よくある質問 ⑨</div></div>
+  <div class="qa">
+    <div class="qa-q">LINE登録したら強引に勧誘されませんか？</div>
+    <div class="qa-a">強引な勧誘は一切しません。不要であればいつでも退会できます。まず受け取ってから判断してください。</div>
+  </div>
+</div>
+
+<!-- Q&A⑩ -->
+<div class="sec sec-gray">
+  <div class="haz-title"><div class="haz-title-inner">よくある質問 ⑩</div></div>
+  <div class="qa">
+    <div class="qa-q">過去に副業で何度も失敗しているのですが…</div>
+    <div class="qa-a">失敗経験がある方ほど向いています。私自身がせどり・アフィリエイト・YouTubeで何度も挫折しました。続かなかった理由はシンプルです。AIがやってくれないから。人間がやるのはコピペだけ。だから続きます。</div>
+  </div>
+</div>
+
+<div class="hazard"></div>
+
+<!-- 感情揺さぶり -->
+<div class="sec sec-dark">
+  <div class="red-box">今、あなたの前に<br>3つの道があります</div>
+  <div class="choice choice-bad">
+    <div class="choice-mark">❌</div>
+    <div class="choice-title">何もしない</div>
+    <div class="choice-sub">→ 1年後も同じ悩みを抱えている。物価は上がり続け、給料は変わらない。「あのとき登録しておけば」という後悔だけが残る。</div>
+  </div>
+  <div class="choice choice-bad">
+    <div class="choice-mark">❌</div>
+    <div class="choice-title">自分で独学する</div>
+    <div class="choice-sub">→ 時間を浪費して中途半端に終わる。試行錯誤で半年が過ぎ、「もっと効率的な方法があったのでは」という疑念だけが残る。</div>
+  </div>
+  <div class="choice choice-good">
+    <div class="choice-mark">✅</div>
+    <div class="choice-title">今日、LINEに登録する</div>
+    <div class="choice-sub">→ 正しいノウハウで最短ルートを進む。1年後には月10万円のサブ収入が生まれている。違いはたった一つの決断だけ。</div>
+  </div>
+</div>
+
+<div class="hazard"></div>
+
+<!-- プレゼント01 -->
+<div class="sec sec-dark">
+  <div class="gold-box">🎁 LINE登録で受け取れる<br>無料プレゼント10個</div>
+  <div class="present">
+    <div class="present-badge">特典 01 / 10</div>
+    <div class="present-title">スマホだけでできる<br>AI副業ランキングTOP5</div>
+    <div class="present-sub">LINE登録後すぐに届きます</div>
+  </div>
+</div>
+
+<!-- プレゼント02 -->
+<div class="sec sec-dark" style="padding-top:0;">
+  <div class="present">
+    <div class="present-badge">特典 02 / 10</div>
+    <div class="present-title">コピペするだけで<br>お金になるAIの使い方5選</div>
+  </div>
+</div>
+
+<!-- プレゼント03 -->
+<div class="sec sec-dark" style="padding-top:0;">
+  <div class="present">
+    <div class="present-badge">特典 03 / 10</div>
+    <div class="present-title">AIで文章を書いて<br>稼いだ人の事例集10選</div>
+  </div>
+</div>
+
+<!-- プレゼント04 -->
+<div class="sec sec-dark" style="padding-top:0;">
+  <div class="present">
+    <div class="present-badge">特典 04 / 10</div>
+    <div class="present-title">ChatGPTに聞くだけで<br>稼げる文章が完成する<br>プロンプト集</div>
+  </div>
+</div>
+
+<!-- プレゼント05 -->
+<div class="sec sec-dark" style="padding-top:0;">
+  <div class="present">
+    <div class="present-badge">特典 05 / 10</div>
+    <div class="present-title">AIで副業を始める前に<br>知っておくべきこと5つ</div>
+  </div>
+</div>
+
+<!-- プレゼント06 -->
+<div class="sec sec-dark" style="padding-top:0;">
+  <div class="present">
+    <div class="present-badge">特典 06 / 10</div>
+    <div class="present-title">隙間時間30分でできる<br>AI副業の1日ルーティン</div>
+  </div>
+</div>
+
+<!-- プレゼント07 -->
+<div class="sec sec-dark" style="padding-top:0;">
+  <div class="present">
+    <div class="present-badge">特典 07 / 10</div>
+    <div class="present-title">AIを使って<br>月1万円稼ぐまでの最短ルート</div>
+  </div>
+</div>
+
+<!-- プレゼント08 -->
+<div class="sec sec-dark" style="padding-top:0;">
+  <div class="present">
+    <div class="present-badge">特典 08 / 10</div>
+    <div class="present-title">副業初心者がやりがちな<br>失敗と対策集</div>
+  </div>
+</div>
+
+<!-- プレゼント09 -->
+<div class="sec sec-dark" style="padding-top:0;">
+  <div class="present">
+    <div class="present-badge">特典 09 / 10</div>
+    <div class="present-title">AIで稼ぐのに<br>向いている人・向いていない人</div>
+  </div>
+</div>
+
+<!-- プレゼント10 -->
+<div class="sec sec-dark" style="padding-top:0;padding-bottom:44px;">
+  <div class="present" style="border-color:rgba(245,196,0,0.9);background:rgba(245,196,0,0.1);">
+    <div class="present-badge" style="background:#fff;color:#cc0000;">特典 10 / 10 🏆</div>
+    <div class="present-title">【結論】AIコピペだけで<br>稼げる方法はこれでした<br>〜登録後に全部お見せします〜</div>
+    <div class="present-sub" style="color:#f5c400;">※最終特典・全ての答えがここに</div>
+  </div>
+</div>
+
+<div class="hazard"></div>
+
+<!-- 最終CTA -->
+<div class="cta-sec">
+  <div class="red-box" style="margin-bottom:20px;">あなたの疑問は<br>解消されましたか？</div>
+
+  <ul class="check-list" style="margin-bottom:24px;">
+    <li>サービスの基本的な内容</li>
+    <li>私の実績と信頼性</li>
+    <li>具体的な方法とやり方</li>
+    <li>時間と手間について</li>
+    <li>40〜50代でも大丈夫な理由</li>
+    <li>会社にバレない方法</li>
+    <li>強引な勧誘はしないお約束</li>
+  </ul>
+
+  <p style="color:#fff;font-size:16px;font-weight:700;margin-bottom:28px;">
+    隠し事は一切しませんでした。<br>
+    もう迷う理由はありません。<br>
+    残るのは<span style="color:#f5c400;">「行動」</span>だけです。
+  </p>
+
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><div class="step-text">下のボタンを押す</div></div>
+    <div class="step"><div class="step-num">2</div><div class="step-text">LINEに友だち追加する</div></div>
+    <div class="step"><div class="step-num">3</div><div class="step-text">特典10個が順番に届く</div></div>
+  </div>
+
+  <a href="#LINE_URL" class="line-btn" style="margin-bottom:16px;">今すぐ無料で受け取る</a>
+  <p class="line-note">登録無料・1分で完了・いつでも退会できます</p>
+
+  <div class="red-box" style="margin-top:28px;font-size:16px;">
+    先着30名の枠が埋まった瞬間<br>この案内は消えます<br>
+    <span style="font-size:14px;font-weight:400;">▼ 今すぐ残席を確認してください ▼</span>
+  </div>
+</div>
+
+<div class="hazard"></div>
+<div class="footer">© 2026 元気｜AI副業の教科書</div>
+
+</body>
+</html>

@@ -91,10 +91,13 @@ body{font-family:'Hiragino Sans','Hiragino Kochi Gothic','Yu Gothic',sans-serif;
 .choice-good .choice-sub{color:#ffe;}
 
 /* プレゼントカード */
-.present{background:rgba(255,255,255,.06);border:1px solid rgba(245,196,0,.5);border-radius:8px;padding:20px 16px;margin-bottom:14px;}
-.present-badge{background:#f5c400;color:#111;font-size:12px;font-weight:900;display:inline-block;padding:4px 12px;border-radius:3px;margin-bottom:10px;}
-.present-title{color:#fff;font-size:18px;font-weight:900;line-height:1.5;}
-.present-sub{color:#aaa;font-size:14px;margin-top:6px;}
+.present{background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.04));border:2px solid rgba(245,196,0,.6);border-radius:12px;padding:18px 16px;margin-bottom:12px;display:flex;align-items:center;gap:16px;}
+.present-num{background:linear-gradient(135deg,#f5c400,#d4a900);color:#111;font-size:20px;font-weight:900;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;flex-shrink:0;line-height:1;}
+.present-body{flex:1;}
+.present-badge{background:rgba(245,196,0,.15);color:#f5c400;font-size:12px;font-weight:900;display:inline-block;padding:3px 10px;border-radius:3px;margin-bottom:8px;border:1px solid rgba(245,196,0,.3);}
+.present-title{color:#fff;font-size:17px;font-weight:900;line-height:1.5;}
+.present-sub{color:#bbb;font-size:14px;margin-top:6px;}
+.present-final{background:linear-gradient(135deg,rgba(245,196,0,.18),rgba(245,196,0,.06));border:2px solid #f5c400;}
 
 /* チェックリスト */
 .check-list{list-style:none;}
@@ -193,47 +196,86 @@ html{scroll-behavior:smooth;}
 <!-- プレゼント01〜10 -->
 <div class="sec sec-dark">
   <div class="gold-box">🎁 LINE登録で受け取れる<br>無料プレゼント10個</div>
+
   <div class="present">
-    <div class="present-badge">特典 01 / 10</div>
-    <div class="present-title">スマホだけでできる<br>AI副業ランキングTOP5</div>
-    <div class="present-sub">LINE登録後すぐに届きます</div>
+    <div class="present-num">1</div>
+    <div class="present-body">
+      <div class="present-badge">特典 01 / 10・登録後すぐ届く</div>
+      <div class="present-title">スマホだけでできる<br>AI副業ランキングTOP5</div>
+    </div>
   </div>
+
   <div class="present">
-    <div class="present-badge">特典 02 / 10</div>
-    <div class="present-title">コピペするだけで<br>お金になるAIの使い方5選</div>
+    <div class="present-num">2</div>
+    <div class="present-body">
+      <div class="present-badge">特典 02 / 10</div>
+      <div class="present-title">コピペするだけで<br>お金になるAIの使い方5選</div>
+    </div>
   </div>
+
   <div class="present">
-    <div class="present-badge">特典 03 / 10</div>
-    <div class="present-title">AIで文章を書いて<br>稼いだ人の事例集10選</div>
+    <div class="present-num">3</div>
+    <div class="present-body">
+      <div class="present-badge">特典 03 / 10</div>
+      <div class="present-title">AIで文章を書いて<br>稼いだ人の事例集10選</div>
+    </div>
   </div>
+
   <div class="present">
-    <div class="present-badge">特典 04 / 10</div>
-    <div class="present-title">ChatGPTに聞くだけで<br>稼げる文章が完成する<br>プロンプト集</div>
+    <div class="present-num">4</div>
+    <div class="present-body">
+      <div class="present-badge">特典 04 / 10</div>
+      <div class="present-title">ChatGPTに聞くだけで稼げる<br>文章が完成するプロンプト集</div>
+    </div>
   </div>
+
   <div class="present">
-    <div class="present-badge">特典 05 / 10</div>
-    <div class="present-title">AIで副業を始める前に<br>知っておくべきこと5つ</div>
+    <div class="present-num">5</div>
+    <div class="present-body">
+      <div class="present-badge">特典 05 / 10</div>
+      <div class="present-title">AIで副業を始める前に<br>知っておくべきこと5つ</div>
+    </div>
   </div>
+
   <div class="present">
-    <div class="present-badge">特典 06 / 10</div>
-    <div class="present-title">隙間時間30分でできる<br>AI副業の1日ルーティン</div>
+    <div class="present-num">6</div>
+    <div class="present-body">
+      <div class="present-badge">特典 06 / 10</div>
+      <div class="present-title">隙間時間30分でできる<br>AI副業の1日ルーティン</div>
+    </div>
   </div>
+
   <div class="present">
-    <div class="present-badge">特典 07 / 10</div>
-    <div class="present-title">AIを使って<br>月1万円稼ぐまでの最短ルート</div>
+    <div class="present-num">7</div>
+    <div class="present-body">
+      <div class="present-badge">特典 07 / 10</div>
+      <div class="present-title">AIを使って<br>月1万円稼ぐまでの最短ルート</div>
+    </div>
   </div>
+
   <div class="present">
-    <div class="present-badge">特典 08 / 10</div>
-    <div class="present-title">副業初心者がやりがちな<br>失敗と対策集</div>
+    <div class="present-num">8</div>
+    <div class="present-body">
+      <div class="present-badge">特典 08 / 10</div>
+      <div class="present-title">副業初心者がやりがちな<br>失敗と対策集</div>
+    </div>
   </div>
+
   <div class="present">
-    <div class="present-badge">特典 09 / 10</div>
-    <div class="present-title">AIで稼ぐのに<br>向いている人・向いていない人</div>
+    <div class="present-num">9</div>
+    <div class="present-body">
+      <div class="present-badge">特典 09 / 10</div>
+      <div class="present-title">AIで稼ぐのに<br>向いている人・向いていない人</div>
+    </div>
   </div>
-  <div class="present" style="border-color:rgba(245,196,0,0.9);background:rgba(245,196,0,0.1);">
-    <div class="present-badge" style="background:#fff;color:#cc0000;">特典 10 / 10 🏆</div>
-    <div class="present-title">【結論】AIコピペだけで<br>稼げる方法はこれでした<br>〜登録後に全部お見せします〜</div>
-    <div class="present-sub" style="color:#f5c400;">※最終特典・全ての答えがここに</div>
+
+  <div class="present present-final">
+    <div class="present-num" style="background:linear-gradient(135deg,#fff,#f5c400);font-size:16px;">🏆</div>
+    <div class="present-body">
+      <div class="present-badge" style="background:rgba(245,196,0,.3);color:#f5c400;border-color:#f5c400;">特典 10 / 10・最終特典</div>
+      <div class="present-title">【結論】AIコピペだけで稼げる<br>方法はこれでした</div>
+      <div class="present-sub" style="color:#f5c400;">全ての答えが登録後に届きます</div>
+    </div>
   </div>
 </div>
 

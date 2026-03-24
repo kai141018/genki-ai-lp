@@ -90,14 +90,22 @@ body{font-family:'Hiragino Sans','Hiragino Kochi Gothic','Yu Gothic',sans-serif;
 .choice-sub{font-size:15px;color:#ccc;line-height:1.6;}
 .choice-good .choice-sub{color:#ffe;}
 
-/* プレゼントカード */
-.present{background:linear-gradient(135deg,rgba(255,255,255,.09),rgba(255,255,255,.04));border:2px solid rgba(245,196,0,.6);border-radius:12px;padding:18px 16px;margin-bottom:12px;display:flex;align-items:center;gap:16px;}
-.present-num{background:linear-gradient(135deg,#f5c400,#d4a900);color:#111;font-size:20px;font-weight:900;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;flex-shrink:0;line-height:1;}
-.present-body{flex:1;}
-.present-badge{background:rgba(245,196,0,.15);color:#f5c400;font-size:12px;font-weight:900;display:inline-block;padding:3px 10px;border-radius:3px;margin-bottom:8px;border:1px solid rgba(245,196,0,.3);}
-.present-title{color:#fff;font-size:17px;font-weight:900;line-height:1.5;}
-.present-sub{color:#bbb;font-size:14px;margin-top:6px;}
-.present-final{background:linear-gradient(135deg,rgba(245,196,0,.18),rgba(245,196,0,.06));border:2px solid #f5c400;}
+/* プレゼントカード（リニューアル） */
+.present{background:linear-gradient(180deg,rgba(30,20,0,.95),rgba(10,8,0,.98));border:2px solid rgba(245,196,0,.8);border-radius:14px;margin-bottom:16px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.6),inset 0 1px 0 rgba(245,196,0,.15);}
+.present-head{background:linear-gradient(135deg,#f5c400 0%,#e6b800 50%,#d4a900 100%);padding:12px 16px;display:flex;align-items:center;gap:12px;}
+.present-num{background:#111;color:#f5c400;font-size:18px;font-weight:900;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:2px solid rgba(245,196,0,.4);}
+.present-head-label{color:#111;font-size:14px;font-weight:900;line-height:1.4;}
+.present-body{padding:16px 16px 18px;}
+.present-title{color:#fff;font-size:18px;font-weight:900;line-height:1.5;margin-bottom:12px;}
+.present-checks{list-style:none;padding:0;margin:0;}
+.present-checks li{color:#ddd;font-size:14px;padding:6px 0 6px 26px;position:relative;line-height:1.6;border-bottom:1px solid rgba(255,255,255,.06);}
+.present-checks li:last-child{border-bottom:none;padding-bottom:0;}
+.present-checks li::before{content:'✓';position:absolute;left:0;color:#f5c400;font-weight:900;font-size:15px;}
+.present-final .present-head{background:linear-gradient(135deg,#cc0000,#ff3333);}
+.present-final{border-color:#ff6644;box-shadow:0 6px 30px rgba(200,0,0,.35),inset 0 1px 0 rgba(255,150,0,.2);}
+.present-final .present-num{background:#fff;color:#cc0000;border-color:rgba(255,100,0,.4);}
+.present-final .present-head-label{color:#fff;}
+.present-final .present-title{color:#f5c400;}
 
 /* チェックリスト */
 .check-list{list-style:none;}
@@ -195,86 +203,155 @@ html{scroll-behavior:smooth;}
 
 <!-- プレゼント01〜10 -->
 <div class="sec sec-dark">
-  <div class="gold-box">🎁 LINE登録で受け取れる<br>無料プレゼント10個</div>
+  <div class="gold-box">LINE登録で受け取れる<br>無料プレゼント10個</div>
 
   <div class="present">
-    <div class="present-num">1</div>
+    <div class="present-head">
+      <div class="present-num">1</div>
+      <div class="present-head-label">特典 01 / 10｜登録後すぐ届く</div>
+    </div>
     <div class="present-body">
-      <div class="present-badge">特典 01 / 10・登録後すぐ届く</div>
       <div class="present-title">スマホだけでできる<br>AI副業ランキングTOP5</div>
+      <ul class="present-checks">
+        <li>スマホ1台で今日から始められる副業を厳選</li>
+        <li>40〜50代が実際に月10万円超えた方法のみ掲載</li>
+        <li>ランキング形式で「一番簡単なもの」から紹介</li>
+      </ul>
     </div>
   </div>
 
   <div class="present">
-    <div class="present-num">2</div>
+    <div class="present-head">
+      <div class="present-num">2</div>
+      <div class="present-head-label">特典 02 / 10</div>
+    </div>
     <div class="present-body">
-      <div class="present-badge">特典 02 / 10</div>
       <div class="present-title">コピペするだけで<br>お金になるAIの使い方5選</div>
+      <ul class="present-checks">
+        <li>AIが文章を9割作ってくれる具体的な使い方</li>
+        <li>スマホのコピペだけで投稿が完了する作業フロー</li>
+        <li>1回5分で終わる最速パターンを公開</li>
+      </ul>
     </div>
   </div>
 
   <div class="present">
-    <div class="present-num">3</div>
+    <div class="present-head">
+      <div class="present-num">3</div>
+      <div class="present-head-label">特典 03 / 10</div>
+    </div>
     <div class="present-body">
-      <div class="present-badge">特典 03 / 10</div>
       <div class="present-title">AIで文章を書いて<br>稼いだ人の事例集10選</div>
+      <ul class="present-checks">
+        <li>実際の収益報告スクリーンショット付きで公開</li>
+        <li>40〜50代・スマホのみ・副業初心者の事例中心</li>
+        <li>月1万〜月20万まで段階別に10名を紹介</li>
+      </ul>
     </div>
   </div>
 
   <div class="present">
-    <div class="present-num">4</div>
+    <div class="present-head">
+      <div class="present-num">4</div>
+      <div class="present-head-label">特典 04 / 10</div>
+    </div>
     <div class="present-body">
-      <div class="present-badge">特典 04 / 10</div>
       <div class="present-title">ChatGPTに聞くだけで稼げる<br>文章が完成するプロンプト集</div>
+      <ul class="present-checks">
+        <li>コピペして貼るだけで使えるプロンプトをそのまま収録</li>
+        <li>楽天アフィリエイト特化型・初心者でも迷わない</li>
+        <li>このプロンプトだけで月収が変わった声が続出</li>
+      </ul>
     </div>
   </div>
 
   <div class="present">
-    <div class="present-num">5</div>
+    <div class="present-head">
+      <div class="present-num">5</div>
+      <div class="present-head-label">特典 05 / 10</div>
+    </div>
     <div class="present-body">
-      <div class="present-badge">特典 05 / 10</div>
       <div class="present-title">AIで副業を始める前に<br>知っておくべきこと5つ</div>
+      <ul class="present-checks">
+        <li>失敗しないための事前チェックリスト</li>
+        <li>税金・確定申告で損しないための基礎知識</li>
+        <li>副業詐欺を見抜く3つの見分け方</li>
+      </ul>
     </div>
   </div>
 
   <div class="present">
-    <div class="present-num">6</div>
+    <div class="present-head">
+      <div class="present-num">6</div>
+      <div class="present-head-label">特典 06 / 10</div>
+    </div>
     <div class="present-body">
-      <div class="present-badge">特典 06 / 10</div>
       <div class="present-title">隙間時間30分でできる<br>AI副業の1日ルーティン</div>
+      <ul class="present-checks">
+        <li>通勤・昼休み・子どもが寝た後に分けた時間割</li>
+        <li>毎日続く習慣を作る「最小作業」の設計法</li>
+        <li>スマホ操作だけで1日分の作業が完結する流れ</li>
+      </ul>
     </div>
   </div>
 
   <div class="present">
-    <div class="present-num">7</div>
+    <div class="present-head">
+      <div class="present-num">7</div>
+      <div class="present-head-label">特典 07 / 10</div>
+    </div>
     <div class="present-body">
-      <div class="present-badge">特典 07 / 10</div>
       <div class="present-title">AIを使って<br>月1万円稼ぐまでの最短ルート</div>
+      <ul class="present-checks">
+        <li>登録〜初収益まで最短で動けるステップを図解</li>
+        <li>最速で結果が出た順に並べた行動リスト付き</li>
+        <li>「最初の1万円」を生む具体的なアクションプラン</li>
+      </ul>
     </div>
   </div>
 
   <div class="present">
-    <div class="present-num">8</div>
+    <div class="present-head">
+      <div class="present-num">8</div>
+      <div class="present-head-label">特典 08 / 10</div>
+    </div>
     <div class="present-body">
-      <div class="present-badge">特典 08 / 10</div>
       <div class="present-title">副業初心者がやりがちな<br>失敗と対策集</div>
+      <ul class="present-checks">
+        <li>続かない理由ベスト5と今すぐできる解決法</li>
+        <li>時間とお金を無駄にしないための判断基準</li>
+        <li>挫折しやすいタイミングと乗り越え方を先読み解説</li>
+      </ul>
     </div>
   </div>
 
   <div class="present">
-    <div class="present-num">9</div>
+    <div class="present-head">
+      <div class="present-num">9</div>
+      <div class="present-head-label">特典 09 / 10</div>
+    </div>
     <div class="present-body">
-      <div class="present-badge">特典 09 / 10</div>
       <div class="present-title">AIで稼ぐのに<br>向いている人・向いていない人</div>
+      <ul class="present-checks">
+        <li>自己診断チェックリストで自分のタイプがわかる</li>
+        <li>「向いていない」と思っていた人が稼げた理由</li>
+        <li>あなたのタイプ別おすすめスタートプランを提示</li>
+      </ul>
     </div>
   </div>
 
   <div class="present present-final">
-    <div class="present-num" style="background:linear-gradient(135deg,#fff,#f5c400);font-size:16px;">🏆</div>
+    <div class="present-head present-final-head">
+      <div class="present-num">10</div>
+      <div class="present-head-label">特典 10 / 10｜最終特典・全ての答え</div>
+    </div>
     <div class="present-body">
-      <div class="present-badge" style="background:rgba(245,196,0,.3);color:#f5c400;border-color:#f5c400;">特典 10 / 10・最終特典</div>
-      <div class="present-title">【結論】AIコピペだけで稼げる<br>方法はこれでした</div>
-      <div class="present-sub" style="color:#f5c400;">全ての答えが登録後に届きます</div>
+      <div class="present-title">【結論】AIコピペだけで<br>稼げる方法はこれでした</div>
+      <ul class="present-checks">
+        <li>Threads × 楽天アフィリエイト × AIの完全解説</li>
+        <li>月10万円への具体的ロードマップを全公開</li>
+        <li>今日から始める3ステップをすべてお見せします</li>
+      </ul>
     </div>
   </div>
 </div>
